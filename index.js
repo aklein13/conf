@@ -105,7 +105,6 @@ class Conf {
 	}
 	get store() {
 		if (this.currentStore) {
-			console.log('CACHE', this.currentStore.clipboardHistory[0]);
 			return this.currentStore;
 		}
 		try {
