@@ -43,12 +43,5 @@
 		"make-dir": "^1.0.0",
 		"pkg-up": "^2.0.0",
 		"write-file-atomic": "^2.3.0"
-	},
-	"devDependencies": {
-		"ava": "*",
-		"clear-module": "^2.1.0",
-		"del": "^3.0.0",
-		"tempy": "^0.2.1",
-		"xo": "*"
 	}
 }

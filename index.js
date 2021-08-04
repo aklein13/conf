@@ -104,6 +104,10 @@ class Conf {
 		return Object.keys(this.store).length;
 	}
 	get store() {
+		if (this.currentStore) {
+			console.log('CACHE', this.currentStore.clipboardHistory[0]);
+			return this.currentStore;
+		}
 		try {
 			let data = fs.readFileSync(this.path, this.encryptionKey ? null : 'utf8');
 
@@ -129,6 +133,7 @@ class Conf {
 		}
 	}
 	set store(val) {
+		this.currentStore = val;
 		// Ensure the directory exists as it could have been deleted in the meantime
 		makeDir.sync(path.dirname(this.path));
 
