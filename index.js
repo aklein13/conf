@@ -136,7 +136,7 @@ class Conf {
 		// Ensure the directory exists as it could have been deleted in the meantime
 		makeDir.sync(path.dirname(this.path));
 
-		let data = JSON.stringify(val, null, '\t');
+		let data = JSON.stringify(val);
 
 		if (this.encryptionKey) {
 			const cipher = crypto.createCipher('aes-256-cbc', this.encryptionKey);
